@@ -125,7 +125,7 @@ SELECT
 		WHEN [day] = 6 THEN 'Friday'
 		ELSE 'Saturday'
 	END AS day_of_week,
-	ROUND(AVG([mins_length]),2 AS a_ride_length,
+	ROUND(AVG([mins_length]),2) AS a_ride_length,
 	[member_casual],
 	DATEPART(HOUR, [time_start]) AS hour
 FROM [dbo].[tripdata_day_only]
