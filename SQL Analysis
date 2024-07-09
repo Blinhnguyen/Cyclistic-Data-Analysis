@@ -180,3 +180,12 @@ GROUP BY
 	[member_casual], [rideable_type], [start_lat], [start_lng], [end_lat], [end_lng], 
 	CONCAT([start_station_name], ' to ', [end_station_name])
 ORDER BY rides_taken DESC
+
+-- 16. Tháng có số lượng chuyến đi nhiều nhất
+SELECT TOP 1
+	DATENAME(MONTH, [started_at]) AS Month,
+	COUNT(*) AS rides_taken
+FROM [dbo].[tripdata_6months_nonull]
+GROUP BY DATENAME(MONTH, [started_at])
+ORDER BY rides_taken DESC
+
