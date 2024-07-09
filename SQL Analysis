@@ -27,6 +27,7 @@ AND [end_station_name] IS NOT NULL
 AND [end_station_id] IS NOT NULL
 
 
+
 /* PHÂN TÍCH DỮ LIỆU */
 -- 3. Tạo một VIEW chứa thêm các thông tin về tháng, ngày trong tuần và thời gian chuyến đi.
 CREATE VIEW tripdata_details AS
@@ -181,7 +182,7 @@ GROUP BY
 	CONCAT([start_station_name], ' to ', [end_station_name])
 ORDER BY rides_taken DESC
 
--- 16. Tháng có số lượng chuyến đi nhiều nhất
+-- 16. Tháng có số lượng chuyến đi nhiều nhất.
 SELECT TOP 1
 	DATENAME(MONTH, [started_at]) AS Month,
 	COUNT(*) AS rides_taken
