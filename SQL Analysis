@@ -101,7 +101,7 @@ SELECT
 	[member_casual]
 FROM [dbo].[tripdata_day_only]
 GROUP BY 
-	CONCAT([start_station_name], ' to', [end_station_name]),
+	CONCAT([start_station_name], ' to ', [end_station_name]),
 	[member_casual]
 ORDER BY num_of_rides DESC
 
@@ -143,7 +143,7 @@ SELECT
 		WHEN [day] = 6 THEN 'Friday'
 		ELSE 'Saturday'
 	END AS day_of_week,
-	CONCAT([start_station_name], ' to', [end_station_name]) AS route,
+	CONCAT([start_station_name], ' to ', [end_station_name]) AS route,
 	COUNT(*) AS num_of_rides,
 	[rideable_type],
 	[member_casual],
@@ -153,6 +153,30 @@ GROUP BY
 	[member_casual], 
 	[day], 
 	DATEPART(HOUR, [time_start]),
-	CONCAT([start_station_name], ' to', [end_station_name]),
+	CONCAT([start_station_name], ' to ', [end_station_name]),
 	[rideable_type]
 ORDER BY num_of_rides DESC
+
+-- 14. Thời gian trung bình chuyến đi theo loại khách hàng.
+CREATE VIEW avg_time AS
+SELECT 
+	AVG([mins_length]) AS avg_time,
+	[member_casual]
+FROM [dbo].[tripdata_details]
+GROUP BY [member_casual]
+
+-- 15. Top 100 các tuyến đường có nhiều chuyến đi nhất theo loại khách hàng và loại xe.
+CREATE VIEW top_100_route AS
+SELECT
+	TOP 100
+	CONCAT([start_station_name], ' to ', [end_station_name]) AS route_name,
+	[start_lat], [start_lng],
+	[end_lat], [end_lng],
+	COUNT(*) AS rides_taken,
+	[member_casual],
+	[rideable_type]
+FROM [dbo].[tripdata_6months_nonull]
+GROUP BY 
+	[member_casual], [rideable_type], [start_lat], [start_lng], [end_lat], [end_lng], 
+	CONCAT([start_station_name], ' to ', [end_station_name])
+ORDER BY rides_taken DESC
