@@ -268,12 +268,52 @@ Kết quả: 889,895 dòng.
 
 
 ## Phase 5: Share
-Dự án sử dụng PowerBI để trực quan hóa dữ liệu và hỗ trợ đưa ra các insight chính.
+Dự án sử dụng PowerBI để trực quan hóa dữ liệu và hỗ trợ đưa ra phân tích.
 
 ![image](https://github.com/Blinhnguyen/Cyclistic-Data-Analysis/assets/174605183/a1525d7a-310b-4c20-abe1-b3b12d8d0771)
 
+__Các Insight chính:__
+1. Số lượng khách hàng __member__ nhiều hơn đáng kể so với số lượng khách hàng __casual__ với gần 75%^ trong số tổng cộng 1,671,340 chuyến đi trong vòng 6 tháng, cho thấy đây là đối tượng khách hàng trọng tâm mang lại nguồn doanh thu chính cho công ty. Đồng thời, số lượt khách hàng sử dụng đạt đỉnh điểm vào tháng 4 với tổng cộng gần 300,000 chuyến đi.
+2. Thời gian trung bình cho 1 chuyến đi là khoảng 14 phút và khách hàng __member__ thường có thời gian sử dụng xe ngắn hơn so với khách hàng __casual__ với thời gian trung bình chênh lệch khoảng 9 phút.
+3. Xe đạp truyền thống được sử dụng phổ biến hơn xe đạp điện.
+4. Khách hàng __member__ sử dụng xe nhiều nhất vào các ngày trong tuần với số lượng nhiều nhất vào thứ 3, thứ 4 và thứ 5; trong khi đó khách hàng __casual__ có xu hướng sử dụng xe vào các ngày cuối tuần như thứ 7 và Chủ nhật.
+5. Khách hàng __member__ có xu hướng sử dụng xe vào các giờ cao điểm (khoảng 8 giờ sáng và 17h chiều), chiếm hơn 47% số lượng so với cả tuần. Trong khi đó, số lượng khách hàng __casual__ sử dụng xe tăng đều trong 1 ngày, đạt đỉnh vào khoảng 17h chiều và có xu hướng giảm vào cuối ngày.
+6. Không chỉ vậy, sự phân bổ các địa điểm sử dụng xe cũng khác nhau giữa 2 loại khách hàng. Khách hàng __member__ thường xuyên sử dụng xe trong nội thành, các khu dân cư và hầu hết đi qua các trường Đại học trong thành phố như University of Chicago và Illinois Institute of Technology. Ngược lại, khách hàng __casual__ có xu hướng sử dụng xe tại các địa điểm gần bờ biển và các công viên như biển Oak Street, công viên Millennium và cảng Chicago.
 
+=> Nhìn tổng quan, các dữ liệu cho thấy rằng khách hàng __casual__ có xu hướng đạp xe như một hình thức vận động và giải trí vào giờ tan làm, thời gian rảnh rỗi hoặc các ngày cuối tuần. Trong khi đó, khách hàng __member__ sử dụng xe đạp làm phương tiện di chuyển chính, có thể là sinh viên hoặc những người muốn hạn chế kẹt xe vào giờ cao điểm tại Chicago - 1 trong những thành phố có tỉ lệ xảy ra tắc nghẽn giao thông cao nhất nước Mỹ. Đây là insight chính để lựa chọn khách hàng mục tiêu trong chiến dịch marketing sắp tới của công ty.
+   
 
 ## Phase 6: Act
+Dự án đưa ra các đề xuất dựa trên __mô hình Marketing mix 4P__
+
+__1. Product__ - Sản phẩm:
+ * Đưa ra các option thay thế trong giao diện app theo xu hướng trẻ trung, hiện đại, phù hợp với đối tượng khách hàng trẻ, đối tượng sinh viên.
+ * Trang trí đa dạng ngoại hình xe theo mùa, theo sự kiện, mang các chủ đề được quan tâm như bảo vệ môi trường, Pride month, Christmas,...
+
+__2. Price__ - Giá:
+ * Đưa ra các gói membership ngắn hạn hơn một năm, ví dụ như gói membership theo tháng, theo quý hoặc gói membership cách tuần đặc biệt khuyến khích khách hàng sử dụng xe vào các ngày cuối tuần.
+ * Đưa ra thêm option về kế hoạch trả phí, gia hạn gói membership.
+
+__3. Place__ - Kênh phân phối:
+ * Mở thêm các trạm xe tại các khu vực dân cư đông đúc và các công viên ven biển.
+ * Đẩy mạnh phân phối dịch vụ bằng cách liên kết với các trường Đại học. 
+
+__4. Promotion__ - Xúc tiến bán:
+ * Đưa ra các chương trình khuyến mãi đặc biệt dành cho sinh viên, giảm giá tích điểm cho các lượt giới thiệu khách hàng mới.
+ * Truyền thông qua các nền tảng mạng xã hội với nội dung ngắn, mang chủ đề viral phù hợp với đối tượng khách hàng trẻ.
+ * Thuê các biển quảng cáo điện tử, billboard vào ban ngày tại các tuyến đường phổ biến, các vị trí công viên, bãi biển,... nơi tập trung nhiều nhất đối tượng khách hàng vãng lai.
+
+   
+## Conclusion
+Dự án phân tích các insight của khách hàng để đưa ra các đề xuất phù hợp nhất cho chiến dịch marketing sắp tới của công ty. Tuy nhiên để nhận diện rõ hơn chân dung khách hàng, công ty nên tiến hành thu thập các thông tin nhân khẩu học như độ tuổi, nghề nghiệp, mức lương, tình trạng hôn nhân,... giúp tối ưu hóa chi phí và tăng độ hiệu quả của chiến dịch.
+
+Các thông tin liên quan về trực quan hóa, code,... nằm trong các folder còn lại.
+
+
+Cre: Blinh Nguyễn
+
+Email: blnguyen2103@gmail.com
+
+
 
 
